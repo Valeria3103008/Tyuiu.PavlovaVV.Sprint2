@@ -6,12 +6,24 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task0.V22
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            Console.WriteLine("Введите Х");
-            int x, y;
-            x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите Y");
-            y = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(ds.GetCompareOperations(x, y));
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("***************************************************************************");
+
+            int x = 3105;
+            int y = 77;
+            bool[] res = new bool[6];
+            res = ds.GetCompareOperations(x, y);
+            Console.WriteLine("x=" + x + " y=" + y);
+
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
+
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine(res[i]);
+            }
+            Console.ReadKey();
 
         }
     }

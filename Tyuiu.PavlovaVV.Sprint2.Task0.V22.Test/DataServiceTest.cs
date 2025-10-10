@@ -5,16 +5,15 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task0.V22.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void ValidExpression()
+        public void ValidGetCompareOperations()
         {
-            DataService ds = new DataService();
-            int x, y;
-            x = 3105;
-            y = 77;
+            DataService service1 = new DataService();
+            int x = 2105;
+            int y = 77;
             bool[] res = new bool[6];
-            res = ds.GetCompareOperations(x, y);
-            bool[] wait = { false, true, true, true, true, false };
-            CollectionAssert.AreEqual(res, wait);
+            res = service1.GetCompareOperations(x, y);
+            bool[] wait = new bool[6] { false, true, true, true, true, false };
+            CollectionAssert.AreEqual(wait, res);
         }
     }
 }
