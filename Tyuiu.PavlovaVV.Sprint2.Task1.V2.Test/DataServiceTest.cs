@@ -5,7 +5,7 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task1.V2.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void ValidGetLogicOperations()
+        public void ValidGetLogicOperations(()
         {
             DataService ds = new DataService();
             int a = 135;
