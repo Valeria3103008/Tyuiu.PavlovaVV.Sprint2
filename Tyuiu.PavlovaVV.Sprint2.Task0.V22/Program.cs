@@ -5,14 +5,14 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task0.V22
     {
         static void Main(string[] args)
         {
-            DataService ds = new DataService();
+            DataService service1 = new DataService();
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
             int x = 3105;
             int y = 77;
             bool[] res = new bool[6];
-            res = ds.GetCompareOperations(x, y);
+            res = service1.GetCompareOperations(x, y);
             Console.WriteLine("x=" + x + " y=" + y);
 
             Console.WriteLine("***************************************************************************");
@@ -24,7 +24,6 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task0.V22
                 Console.WriteLine(res[i]);
             }
             Console.ReadKey();
-
         }
     }
 }

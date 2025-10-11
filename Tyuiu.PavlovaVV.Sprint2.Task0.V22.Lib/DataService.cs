@@ -17,10 +17,3 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task0.V22.Lib
         }
     }
 }
-
-
-
-
-
-
-
