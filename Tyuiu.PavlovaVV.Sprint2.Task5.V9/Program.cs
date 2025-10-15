@@ -5,47 +5,31 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task5.V9
     {
         static void Main(string[] args)
         {
-            DataService dataService = new DataService();
+            DataService ds = new DataService();
+
+            Console.Title = "Спринт #2 | Выполнилa: Павлова П. В. | ИСТНб-25-1";
+            Console.WriteLine("***************************************************************************");
+
+            int Month, Day;
+
             Console.WriteLine("Введите номер месяца: ");
-            int numMounth = Convert.ToInt32(Console.ReadLine());
+            Month = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("Введите номер дня: ");
-            int numDay = Convert.ToInt32(Console.ReadLine());
+            Day = Convert.ToInt32(Console.ReadLine());
 
-            string res;
-
-
-            if ((((numMounth < 1) || (numMounth > 12)) && ((numDay < 1) || (numDay > 30))) && ((numMounth == 4) || (numMounth == 9) || (numMounth == 6) || (numMounth == 11)))
+            if ((Month > 12 || Day > 31) || (Month % 2 != 0 && Day == 31) || (Month == 2 && Day > 28))
             {
-                res = "Введено неверное значение!";
+                Console.WriteLine("Такой даты не существует.");
             }
             else
             {
-                res = ds.FindDateOfNextDay(numMounth);
+                Console.WriteLine(ds.FindDateOfNextDay(Month, Day));
             }
 
-            if ((((numMounth < 1) || (numMounth > 12)) && ((numDay < 1) || (numDay > 31))) && ((numMounth == 1) || (numMounth == 2) || (numMounth == 5) || (numMounth == 11) || (numMounth == 7) || (numMounth == 8) || (numMounth == 10) || (numMounth == 12)))
-            {
-                res = "Введено неверное значение!";
-            }
-            else
-            {
-                res = ds.FindDateOfNextDay(numMounth);
-            }
-
-            if ((((numMounth < 1) || (numMounth > 12)) && ((numDay < 1) || (numDay > 28))) && (numMounth == 2))
-            {
-                res = "Введено неверное значение!";
-            }
-            else
-            {
-                res = ds.FindDateOfNextDay(numMounth);
-            }
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("Дата следующего дня= Месяц: " + ds.FindDateOfNextDay(numMounth) + " День: " + (numDay + 1));
-            Console.ReadKey();
-
         }
     }
 }

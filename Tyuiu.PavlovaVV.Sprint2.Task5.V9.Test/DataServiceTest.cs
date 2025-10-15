@@ -5,32 +5,22 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task5.V9.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void ValidFindMonthName()
+        public void NextDayDateTest()
         {
             DataService ds = new DataService();
-            Assert.AreEqual("Январь", ds.FindDateOfNextDay(1));
-            Assert.AreEqual("Февраль", ds.FindDateOfNextDay(2));
-            Assert.AreEqual("Март", ds.FindDateOfNextDay(3));
-            Assert.AreEqual("Апрель", ds.FindDateOfNextDay(4));
-            Assert.AreEqual("Май", ds.FindDateOfNextDay(5));
-            Assert.AreEqual("Июнь", ds.FindDateOfNextDay(6));
-            Assert.AreEqual("Июль", ds.FindDateOfNextDay(7));
-            Assert.AreEqual("Август", ds.FindDateOfNextDay(8));
-            Assert.AreEqual("Сентябрь", ds.FindDateOfNextDay(9));
-            Assert.AreEqual("Октябрь", ds.FindDateOfNextDay(10));
-            Assert.AreEqual("Ноябрь", ds.FindDateOfNextDay(11));
-            Assert.AreEqual("Декабрь", ds.FindDateOfNextDay(12));
 
-            Assert.ThrowsException<ArgumentException>(() =>
-            {
-                ds.FindDateOfNextDay(-1);
-            });
-            Assert.ThrowsException<ArgumentException>(() =>
-            {
-                ds.FindDateOfNextDay(13);
-            });
-
-
+            Assert.AreEqual("02.01", ds.FindDateOfNextDay(1, 1));
+            Assert.AreEqual("01.03", ds.FindDateOfNextDay(2, 28));
+            Assert.AreEqual("01.04", ds.FindDateOfNextDay(3, 30));
+            Assert.AreEqual("01.05", ds.FindDateOfNextDay(4, 31));
+            Assert.AreEqual("10.05", ds.FindDateOfNextDay(5, 9));
+            Assert.AreEqual("01.07", ds.FindDateOfNextDay(6, 31));
+            Assert.AreEqual("02.07", ds.FindDateOfNextDay(7, 1));
+            Assert.AreEqual("01.09", ds.FindDateOfNextDay(8, 31));
+            Assert.AreEqual("01.10", ds.FindDateOfNextDay(9, 30));
+            Assert.AreEqual("16.10", ds.FindDateOfNextDay(10, 15));
+            Assert.AreEqual("08.11", ds.FindDateOfNextDay(11, 7));
+            Assert.AreEqual("02.12", ds.FindDateOfNextDay(12, 1));
         }
     }
 }
