@@ -4,7 +4,7 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task6.V15.Lib
 {
     public class DataService : ISprint2Task6V15
     {
-        public string FindDayName(int k)
+        public string FindDayName(int k, int d)
         {
             int n;
             string res = "";
@@ -23,6 +23,11 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task6.V15.Lib
                 case 7: return "Воскресение";
             }
             return res;
+        }
+
+        public string FindDayName(int k)
+        {
+            throw new NotImplementedException();
         }
     }
 }

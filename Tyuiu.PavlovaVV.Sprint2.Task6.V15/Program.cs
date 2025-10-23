@@ -24,6 +24,7 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task6.V15
                 Console.WriteLine(ds.FindDayName(k, d));
                 Console.ReadKey();
             }
+        }
     }
 }
 
