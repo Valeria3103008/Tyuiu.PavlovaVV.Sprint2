@@ -24,10 +24,5 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task6.V15.Lib
             }
             return res;
         }
-
-        public string FindDayName(int k)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
