@@ -6,7 +6,7 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task6.V15
         static void Main(string[] args)
         {
             DataService service1 = new DataService();
-            Console.Title = "Спринт #0 | Выполнил: Воробьев С.А. | ПКДб-23-2";
+            Console.Title = "Спринт #0 | Выполнила:Павлова. В.В.  | ИСТНБ-25-1  ";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
             Console.WriteLine("* Тема:Получение результата из switch                                     *");
