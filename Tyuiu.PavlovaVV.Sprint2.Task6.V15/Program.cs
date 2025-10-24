@@ -1,32 +1,38 @@
 ﻿using Tyuiu.PavlovaVV.Sprint2.Task6.V15.Lib;
 namespace Tyuiu.PavlovaVV.Sprint2.Task6.V15
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-                DataService ds = new DataService();
-                int k, d, n;
-                do
-                {
-                    Console.WriteLine("Введите номер дня не високосного года ");
-                    k = Convert.ToInt32(Console.ReadLine());
-                } while (k <= 0 || k >= 365);
+            DataService service1 = new DataService();
+            Console.Title = "Спринт #0 | Выполнил: Воробьев С.А. | ПКДб-23-2";
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* Спринт #2                                                               *");
+            Console.WriteLine("* Тема:Получение результата из switch                                     *");
+            Console.WriteLine("* Задание #2.6                                                            *");
+            Console.WriteLine("* Вариант #15                                                             *");
+            Console.WriteLine("* Выполнил:Воробьев Сергей Александрович | ПКТб-23-2                      *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* УСЛОВИЕ:                                                                *");
+            Console.WriteLine("*Дано целое число k (1 <= k <= 365). Определить, каким днем недели        *");
+            Console.WriteLine("*(понедельником, вторником, …, субботой или воскресеньем) является k-й ден*");
+            Console.WriteLine("*не високосного года, в котором 1 января понедельник.                     *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("***************************************************************************");
 
-                do
-                {
-                    Console.Write("Введите номер дня недели 1 января d = ");
-                    d = Convert.ToInt32(Console.ReadLine());
-                } while (d < 1 || d > 7);
+            Console.Write("Введите день для проверки= ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            string res = service1.FindDayName(k);
 
-                Console.WriteLine(ds.FindDayName(k, d));
-                Console.ReadKey();
-            }
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
+
+            Console.WriteLine("День недели заданного вами дня: " + res);
+            Console.ReadKey();
         }
     }
 }
-
-
 
