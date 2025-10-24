@@ -1,7 +1,7 @@
 ﻿using Tyuiu.PavlovaVV.Sprint2.Task6.V15.Lib;
 namespace Tyuiu.PavlovaVV.Sprint2.Task6.V15.Test
 {
-{
+
     [TestClass]
     public class DataServiceTest
     {
