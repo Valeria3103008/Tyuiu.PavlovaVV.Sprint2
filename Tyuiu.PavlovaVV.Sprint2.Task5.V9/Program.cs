@@ -6,17 +6,16 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task5.V9
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("Введите число месяца: ");
+            Console.WriteLine("* Введите значние m:                                                       ");
             int m = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите число дня: ");
+            Console.WriteLine("* Введите значние n:                                                       ");
             int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("*                                                                          ");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ                                                               *");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                               ");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("Следующий день : " + ds.FindDateOfNextDay(m, n));
+            Console.WriteLine(ds.FindDateOfNextDay(m, n));
+
             Console.ReadKey();
         }
     }

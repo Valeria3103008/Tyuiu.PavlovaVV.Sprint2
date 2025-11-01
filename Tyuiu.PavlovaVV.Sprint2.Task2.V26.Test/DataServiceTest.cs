@@ -8,7 +8,7 @@ namespace Tyuiu.PavlovaVV.Sprint2.Task2.V26.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            Assert.AreEqual(true, ds.CheckDotInShadedArea(8, 7));
+            Assert.AreEqual(true, ds.CheckDotInShadedArea(8.0, 7.0));
         }
     }
 }
